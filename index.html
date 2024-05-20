@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tricks</title>
+    <style>
+        /* Centering Content */
+        .center-horizontal {
+            margin: 0 auto;
+            width: 50%;
+        }
+        .center-both {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Gradient Background */
+        .gradient-bg {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            height: 100vh;
+        }
+
+        /* Rounded Corners and Shadows */
+        .rounded-shadow {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        /* Responsive Grid Layout */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .grid-item {
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Fixed Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Text Styling */
+        .shadowed-text {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .clipped-text {
+            font-size: 40px;
+            font-weight: bold;
+            background: linear-gradient(to right, #30cfd0, #330867);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Hover Effects */
+        .hover-scale {
+            transition: transform 0.3s;
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+        }
+        .hover-scale:hover {
+            transform: scale(1.1);
+        }
+        .hover-bg-change {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .hover-bg-change:hover {
+            background: #2980b9;
+        }
+
+        /* Flexible Images */
+        .flexible-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Fixed Aspect Ratio */
+        .aspect-ratio {
+            width: 100%;
+            padding-top: 56.25%;
+            position: relative;
+        }
+        .aspect-ratio iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Centering Content -->
+    <div class="center-horizontal">
+        Centered Element (Horizontal)
+    </div>
+
+    <div class="center-both">
+        <div>Centered Element (Vertical & Horizontal)</div>
+    </div>
+
+    <!-- Gradient Background -->
+    <div class="gradient-bg">
+        Gradient Background
+    </div>
+
+    <!-- Rounded Corners and Shadows -->
+    <div class="rounded-shadow">
+        Box with rounded corners and shadow
+    </div>
+
+    <!-- Responsive Grid Layout -->
+    <div class="grid-layout">
+        <div class="grid-item">Grid Item 1</div>
+        <div class="grid-item">Grid Item 2</div>
+        <div class="grid-item">Grid Item 3</div>
+    </div>
+
+    <!-- Fixed Bottom Navigation -->
+    <div class="bottom-nav">
+        <img src="assets/images/home-icon.png" alt="home-icon" />
+        <img src="assets/images/wallet-icon.png" alt="wallet-icon"/>
+        <img src="assets/images/transactions-icon.png" alt="transaction-icon"/>
+        <img src="assets/images/profile-icon.png" alt="profile-icon"/>
+    </div>
+
+    <!-- Text Styling -->
+    <p class="shadowed-text">Shadowed Text</p>
+    <p class="clipped-text">Clipped Background Text</p>
+
+    <!-- Hover Effects -->
+    <div class="hover-scale">
+        Hover to Scale
+    </div>
+    <button class="hover-bg-change">
+        Hover Me
+    </button>
+
+    <!-- Flexible Images -->
+    <img src="assets/images/example.jpg" alt="Example" class="flexible-img" />
+
+    <!-- Fixed Aspect Ratio -->
+    <div class="aspect-ratio">
+        <iframe src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>
